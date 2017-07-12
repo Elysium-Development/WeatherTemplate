@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#33b5eb"
+    tools:context="elysium.com.weathertemplate.MainActivity">
+
+        <TextClock
+            android:id="@+id/clock_12hr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:format12Hour="hh:mm a"
+            android:textSize="50sp"
+            android:layout_marginTop="165dp"
+            android:layout_marginLeft="16dp" />
+
+        <TextView
+            android:id="@+id/date_day_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="day"/>
+
+        <TextView
+            android:id="@+id/date_month_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="month"
+            android:layout_toRightOf="@id/date_day_txt"
+            android:layout_marginLeft="7dp"/>
+
+        <TextView
+            android:id="@+id/date_date_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="date"
+            android:layout_toRightOf="@id/date_month_txt"
+            android:layout_marginLeft="7dp"/>
+
+        <TextView
+            android:id="@+id/today_weather_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/welcomeTxt"
+            android:layout_below="@+id/clock_12hr"
+            android:textSize="20sp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="12dp"
+            android:layout_alignParentLeft="true"/>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="376dp"
+            android:layout_height="230dp"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="30dp">
+
+            <RelativeLayout
+                android:id="@+id/panelLeft"
+                android:layout_width="188dp"
+                android:layout_height="230dp"
+                android:background="#37474f">
+
+                <ImageView
+                    android:id="@+id/weatherIcon"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:background="#80cbc4"
+                    android:layout_margin="12dp"/>
+
+                <TextView
+                    android:id="@+id/tempTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/currentTemp"
+                    android:textColor="#e9e9e9"
+                    android:textSize="30sp"
+                    android:layout_toRightOf="@+id/weatherIcon"
+                    android:layout_marginTop="12dp"/>
+
+                <TextView
+                    android:id="@+id/currentLow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/currentlowTemp"
+                    android:textColor="#e9e9e9"
+                    android:textSize="14sp"
+                    android:layout_toRightOf="@id/weatherIcon"
+                    android:layout_below="@id/tempTxt" />
+
+                <TextView
+                    android:id="@+id/conditionsTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/conditions"
+                    android:textColor="#e9e9e9"
+                    android:textSize="18dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_below="@+id/weatherIcon"
+                    android:layout_marginLeft="12dp"/>
+
+                <TextView
+                    android:id="@+id/cityTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/city"
+                    android:textColor="#e9e9e9"
+                    android:layout_below="@+id/conditionsTxt"
+                    android:layout_marginLeft="12dp" />
+
+                <TextView
+                    android:id="@+id/location_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/location"
+                    android:textColor="#e9e9e9"
+                    android:layout_toRightOf="@+id/cityTxt"
+                    android:layout_below="@+id/conditionsTxt"
+                    android:layout_marginLeft="5dp"/>
+
+                <TextView
+                    android:id="@+id/uvIndexTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/uvi"
+                    android:textColor="#e9e9e9"
+                    android:layout_below="@+id/cityTxt"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/uviValueTxt"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/uvi_value"
+                    android:textColor="#e9e9e9"
+                    android:layout_toRightOf="@id/uvIndexTxt"
+                    android:layout_below="@id/cityTxt"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"/>
+
+                <TextView
+                    android:id="@+id/humidityTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/humidity"
+                    android:textColor="#e9e9e9"
+                    android:layout_below="@id/uvIndexTxt"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginTop="10dp"/>
+
+                <TextView
+                    android:id="@+id/humidityPercent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/humidityPercent"
+                    android:textColor="#e9e9e9"
+                    android:layout_toRightOf="@+id/humidityTxt"
+                    android:layout_below="@+id/uvIndexTxt"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/panelRight"
+                android:layout_width="188dp"
+                android:layout_height="230dp"
+                android:background="#80cbc4"
+                android:layout_marginLeft="188dp">
+
+                <TextView
+                    android:id="@+id/lookingAheadTxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Looking Ahead"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="40dp"/>
+
+                <TextView
+                    android:id="@+id/lookAdheadBlurbTxt"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="30dp"
+                    android:text="@string/lookAheadBlurb"
+                    android:textSize="14sp"
+                    android:layout_below="@+id/lookingAheadTxt"/>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>

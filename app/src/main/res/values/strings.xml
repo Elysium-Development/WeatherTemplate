@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">Weather Template</string>
+
+    <!-- Weather-related Strings -->
+    <string name="currentTemp">105\u2109</string>
+    <string name="currentlowTemp">60\u2109</string>
+    <string name="conditions">Conditions</string>
+
+    <!-- Location-related Strings -->
+    <string name="city">City:</string> <!-- Hard-coded: DON'T CHANGE! -->
+    <string name="location">South Orange</string>
+
+    <!-- Value-add Strings -->
+    <string name="uvi">UV Index:</string> <!-- Hard-coded: DON'T CHANGE! -->
+    <string name="uvi_value">9.34</string>
+
+    <string name="humidity">Humidity:</string> <!-- Hard-coded: DON'T CHANGE! -->
+    <string name="humidityPercent">70\u0025</string>
+
+    <!-- Informative Text Strings -->
+    <string name="lookAheadBlurb">Tomorrow will be partly sunny. with a high of 85\u2109 and a low of 64\u2109.</string>
+    <string name="welcomeTxt"></string>
+    <string name="date">EEEE MMMM d</string>
+
+    <!-- Unicode Strings -->
+    <string name="degreeFahrenheitSymbol">\u2109</string>
+    <string name="degreeCelsiusSymbol">\u2103</string>
+    <string name="degreeSymbolPlain">\u00b0</string>
+    <string name="percentSymbol">\u0025</string>
+    <string name="copyrightSymbol">\u00a9</string>
+
+</resources>
